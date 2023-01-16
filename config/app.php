@@ -69,7 +69,9 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tashkent', // UTC +5 Farq -1 soat UTC 5:30 farq +30 minut
+
+    // UTC +5 Toshkent uchun lekn Bag bilan 1 soat farq
 
     /*
     |--------------------------------------------------------------------------
