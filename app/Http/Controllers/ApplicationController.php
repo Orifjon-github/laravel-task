@@ -15,7 +15,24 @@ class ApplicationController extends Controller
 {
 
     public function index() {
+        $now = Carbon::now()->toArray();
+        $application = Application::first();
+        $created_time = $application->created_at->toArray();
+
+        $status = '';
+
+        if ($now['year'] == $created_time['year'] and $now['month'] == $created_time['month']) {
+            $diff = $now['day'] - $created_time['day'];
+            if ($diff == 0) {
+                $status = 'Today';
+            }
+            elseif ($diff == 1) {
+                $status = 'Yesterday';
+            }
+        }
+
         return view('applications.index')->with([
+            'status' => $status,
             'applications' => auth()->user()->applications()->latest()->paginate(3),
         ]);
     }

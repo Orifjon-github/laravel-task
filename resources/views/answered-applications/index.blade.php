@@ -29,7 +29,9 @@
                                             class="rounded-2xl border bg-neutral-100 px-3 py-1 text-xs font-semibold">
                                             ID: {{$application->id}}
                                         </button>
-                                        <div class="text-xs text-neutral-500">{{$application->created_at}}</div>
+
+                                            <div class="text-xs text-neutral-500">{{$application->created_at}}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="flex justify-between">
