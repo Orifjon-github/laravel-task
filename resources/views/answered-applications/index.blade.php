@@ -30,8 +30,12 @@
                                             ID: {{$application->id}}
                                         </button>
 
-                                            <div class="text-xs text-neutral-500">{{$application->created_at}}</div>
+                                        @if($status)
+                                            <div class="text-xs text-neutral-500">{{$status}} {{$application->created_at->format('H:i')}}</div>
+                                        @else
+                                            <div class="text-xs text-neutral-500">{{$application->created_at->format('d/m/Y H:i')}}</div>
                                         @endif
+{{--                                    @endif--}}
                                     </div>
                                 </div>
                                 <div class="flex justify-between">
