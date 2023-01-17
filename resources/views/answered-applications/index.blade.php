@@ -30,8 +30,8 @@
                                             ID: {{$application->id}}
                                         </button>
 
-                                        @if($status)
-                                            <div class="text-xs text-neutral-500">{{$status}} {{$application->created_at->format('H:i')}}</div>
+                                        @if(separator_func($application->created_at))
+                                            <div class="text-xs text-neutral-500">{{separator_func($application->created_at)}} {{$application->created_at->format('H:i')}}</div>
                                         @else
                                             <div class="text-xs text-neutral-500">{{$application->created_at->format('d/m/Y H:i')}}</div>
                                         @endif
