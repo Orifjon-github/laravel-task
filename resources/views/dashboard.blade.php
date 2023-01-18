@@ -1,4 +1,12 @@
 <x-app-layout>
+
+    <x-slot:title>
+        @if(auth()->user()->role->name == 'manager')
+            Received Applications - Depozit.uz
+        @else
+            Create Application - Depozit.uz
+        @endif
+    </x-slot:title>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Dashboard
