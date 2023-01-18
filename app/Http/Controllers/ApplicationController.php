@@ -32,7 +32,6 @@ class ApplicationController extends Controller
             $path = $request->file('file')->storeAs('files', $name, 'public');
         }
 
-
         $application = Application::create([
             'user_id' => auth()->user()->id,
             'subject' => $request->subject,

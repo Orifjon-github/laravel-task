@@ -14,7 +14,7 @@ class MainController extends Controller
 
     public function dashboard() {
         return view('dashboard')->with([
-            'applications' => Application::latest()->paginate()
+            'applications' => Application::latest()->paginate(5)
         ]);
     }
 
