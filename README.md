@@ -21,6 +21,10 @@ Please check the official laravel installation guide for server requirements bef
 
 `composer install`
 
+Install all the dependencies using npm
+
+`npm install`
+
 Copy the example env file and make the required configuration changes in the .env file
 
 `cp .env.example .env`
@@ -39,7 +43,11 @@ Run the database seeder and you're done.
 
 `php artisan migrate:fresh --seed`
 
-*Two accounts are created for use via seed*
+Don't forget to create a link for your files in Storage
+
+`php artisan storage:link`
+
+## **Users**
 - Email: manager@company.com, Password: secret
 - Email: client@company.com, Password: secret
 
@@ -56,8 +64,6 @@ Run the database seeder and you're done.
 ## Final
 
 `php artisan serve`
-
-`npm install`
 
 `npm run dev`
 
